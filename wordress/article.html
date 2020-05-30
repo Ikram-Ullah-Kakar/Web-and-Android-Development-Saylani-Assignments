@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>BioWordress</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="#">Bio-Wordress</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="article.html">Research Artical Writing</a>
+            <a class="dropdown-item" href="proposal.html">Research Proposal Writing</a>
+            <a class="dropdown-item" href="synopsis.html">Synopsis Writing</a>
+            <a class="dropdown-item" href="proof-reading.html">Editing & Proof-Reading</a>
+          </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Kaleem U. Kakar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Our Work</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<script>
+  $('.dropdown').hover(function() {
+          $(this).addClass('show');
+          $(this).find('.dropdown-menu').first().addClass('show');
+          
+      }, function() {
+          $(this).removeClass('show');
+          $(this).find('.dropdown-menu').first().removeClass('show');
+      });
+  $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+    if (!$(this).next().hasClass('show')) {
+      $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    }
+    var $subMenu = $(this).next(".dropdown-menu");
+    $subMenu.toggleClass('show');
+
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+      $('.dropdown-submenu .show').removeClass("show");
+    });
+
+    return false;
+  });
+</script>
+
+<div class="social_part pull-right">
+  <p>
+  <a itemprop="sameAs" href="#">
+  <span class="fa fa-facebook-square fa-2x" style="padding:0"></span>
+  </a>
+  </p>
+  <p>
+  <a itemprop="sameAs" href="#">
+  <span class="fa fa-twitter-square fa-2x" style="padding:0"></span>
+  </a>
+  </p>
+  <p>
+  <a itemprop="sameAs" href="#">
+  <span class="fa fa-instagram fa-2x"></span>
+  </a>
+  </p>
+  
+  </div>
+
+
+
+
+
+
+<!-- Hero Section -->
+<div class="d-lg-flex position-relative">
+  <div class="container d-lg-flex align-items-lg-center space-top-2 space-lg-0 min-vh-lg-100" style="margin-bottom: 8%;margin-top: 8%;">
+    <!-- Content -->
+    
+    <div class="w-md-100">
+      <div class="row">
+        <div class="col-sm-5">
+          <div>
+            <h1 class="display-4 mb-3">Research Artical Writing</h1>
+            <p class="lead">Front's feature-rich designed demo pages help you create the best possible product.</p>
+          </div>
+
+          <a class="btn btn-primary btn-wide transition-3d-hover" href="">Get Started</a>
+          <a class="btn btn-link btn-wide" href="#">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- End Content -->
+<!-- SVG Shape -->
+<figure class="col-sm-7 col-xl-6 d-none d-sm-block position-absolute" style="padding-right: 0;top: 0;right: 0;">
+  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1137.5 979.2">
+    <path fill="#F9FBFF" d="M565.5,957.4c81.1-7.4,155.5-49.3,202.4-115.7C840,739.8,857,570,510.7,348.3C-35.5-1.5-4.2,340.3,2.7,389
+      c0.7,4.7,1.2,9.5,1.7,14.2l29.3,321c14,154.2,150.6,267.8,304.9,253.8L565.5,957.4z"/>
+    <defs>
+      <path id="mainHeroSVG1" d="M1137.5,0H450.4l-278,279.7C22.4,430.6,24.3,675,176.8,823.5l0,0C316.9,960,537.7,968.7,688.2,843.6l449.3-373.4V0z"/>
+    </defs>
+    <clipPath id="mainHeroSVG2">
+      <use xlink:href="#mainHeroSVG1"/>
+    </clipPath>
+    <g transform="matrix(1 0 0 1 0 0)" clip-path="url(#mainHeroSVG2)">
+      <image width="750" height="750" xlink:href='assets/library.jpg' transform="matrix(1.4462 0 0 1.4448 52.8755 0)"></image><!--https://streamlabs.nyc3.cdn.digitaloceanspaces.com/assets/img/750x750/img2.jpg-->
+    </g>
+  </svg>
+</figure>
+<!-- End SVG Shape -->
+</div>
+</div>
+<!-- End Hero Section -->
+
+
+
+
+
+<section class="container introduction" id="next">
+  <h3 class="title">Introduction</h3>
+  <p>We offer a variety of mountaineering packages. Whether you've climbed Everest or don't even know what a mountain is, we've got the perfect vacation for you.</p>
+  <hr>
+</section>
+
+<div class=" services" style="border-radius: 10px;">
+<section class="container-fluid">
+  <h3 class="title">Services</h3>
+  <p>We offer a variety of mountaineering packages. Whether you've climbed Everest or don't even know what a mountain is, we've got the perfect vacation for you.</p>
+  <hr>
+
+  <ul class="row text-center">
+    <li class="col-md-6 col-xl-3 shade">
+      <i class="fa fa-compass fa-4x"></i>
+      <h4>Research Artical Writing</h4>
+      <p>Looking for the complete experience? Take a tour with one of our experts. They'll show you secrets that you're likely to miss otherwise.</p>
+    </li>
+    <li class="col-md-6 col-xl-3 shade">
+      <i class="fa fa-camera-retro fa-4x"></i>
+      <h4>Research Proposal Writing</h4>
+      <p>Want to experience nature's beauty without all of that annoying exercise? Take a photo tour on one of our mountain buses.</p>
+    </li>
+    <li class="col-md-6 col-xl-3 shade">
+      <i class="fa fa-bicycle fa-4x"></i>
+      <h4>Synopsis Writing</h4>
+      <p>If bicycles are more your speed, consider taking a tour through one of our mountain bike paths. We'll provide the bikes, and lunch too!</p>
+    </li>
+    <li class="col-md-6 col-xl-3 shade">
+      <i class="fa fa-flag-checkered fa-4x"></i>
+      <h4>Editing & Proof-Reading</h4>
+      <p>Got a competitive spirit? Sign up for one of our mountain marathons! Try to reach the summit before anyone else.</p>
+    </li>
+  </ul>
+</section>
+</div>
+
+<section class="container ourwork">
+  <h3 class="title">Our Work</h3>
+  <p>We offer a variety of mountaineering packages. Whether you've climbed Everest or don't even know what a mountain is, we've got the perfect vacation for you.</p>
+  <hr>
+
+</section>
+
+
+
+
+
+<!-- Footer -->
+<footer id="footer" class="footer" style="border-radius: 10px;">
+  <div class="footer-top">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-6 col-md-4">
+              <div class="" style="color: #bbb; margin-left: -10px;">
+                  <p>Head Office,
+                      <br> A-25, Bahadurabad Chowrangi
+                      Karachi, Pakistan </p>
+                  <ul class="mt-5" style="list-style: none;">
+                      <li> <i class="fa fa-phone donate"></i> UAN: 111-729-526  </li>
+                      <li> <i class="fa fa-globe donate"></i> (+0092-213) 4130786-90</li>
+                      <li> <i class="fa fa-phone donate"></i> CELL: 92-311-1729526</li>
+                      <li> <i class="fa fa-phone donate"></i> USA NO +1(716)941 7792 </li>
+                      <li> <i class="fa fa-phone donate"></i> UK NO (+44)115 970 6256 </li>
+                      <li> <i class="fa fa-envelope-o donate"></i>  <a href="#"> [email protected]</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-4 connect">
+              <div>
+                  <h5 class="line-bottom">Useful Links</h5>
+                 <hr>
+              </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 connect">
+             <div>
+              <h5 class="mb-10">Connect With Us</h5>
+                  <a href=""><i class="fa fa-facebook-square fa-2x mx-2"></i></a>
+                  <a href=""><i class="fa fa-twitter-square fa-2x mx-2"></i></a>
+                  <a href=""><i class="fa fa-instagram fa-2x mx-2"></i></a>
+                  <a href=""><i class="fa fa-linkedin-square fa-2x mx-2"></i></a>
+          </div></div> 
+          
+      </div>
+    </div>
+  </div>
+  <div class="footer-end">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 my-auto md-text-center">
+                  <p class="font-11 text-light m-0" >Copyright © 2020 Saylani Welfare </p>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
