@@ -97,6 +97,127 @@ document.writeln("<h1>Chapter 4</h1>");
 
 document.writeln("<h1>Chapter 5</h1>");
 
+    document.writeln("<h1>Q1</p>");
+
+        var a=prompt("enter any integer "),b=prompt("enter second integer ");
+        document.writeln("<p>the sum of "+a+" and "+b+" is "+(a+b)+"</p>");
+
+
+        document.writeln("<h1>Q2</p>");
+
+        document.writeln("<p>the substraction of "+a+" and "+b+" is "+(a-b)+"</p>");
+        document.writeln("<p>the multiplication of "+a+" and "+b+" is "+(a*b)+"</p>");
+        document.writeln("<p>the division of "+a+" and "+b+" is "+(a/b)+"</p>");
+        document.writeln("<p>the modulus of "+a+" and "+b+" is "+(a%b)+"</p>");
+
+
+        document.writeln("<h1>Q3</p>");
+        
+            var a;
+            document.writeln("<p>Value after variable declaration is:"+a+"</p>");
+            a=5;
+            document.writeln("<p>initial Value is:"+a+"</p>");
+            a+=1;
+            document.writeln("<p>Value after increment is:"+a+"</p>");
+            a+=7;
+            document.writeln("<p>Value after addition is:"+a+"</p>");
+            a-=1;
+            document.writeln("<p>Value after decrement is:"+a+"</p>");
+            a/=3;
+            document.writeln("<p>The remainder is:"+a+"</p>");
+            
+
+
+        document.writeln("<h1>Q4</p>");
+        
+        var a=600;
+        document.writeln("<p>Total cost to buy 5movie tickets are:"+a*5+"PKR</p>");
+
+
+
+        document.writeln("<h1>Q5</h1>");
+
+        a=prompt("enter any number to show its table ");
+        document.writeln("<p>table for "+a+" is:</p>");
+        for (var i=1;i<=10;i++) {
+            document.writeln("<p>"+a+" * "+i+" ="+a*i+"</p>");
+        };
+
+
+        document.writeln("<h1>Q6</h1>");
+
+        a=prompt("enter temperature in degree Celsius ");
+        document.writeln("<p>"+a+"`F is: "+((9/5*a)+32)+"</p>");
+        a=prompt("enter temperature in Fahrenheit ");
+        document.writeln("<p>"+a+"`C is: "+(5/9*(a-32))+"`F</p>");
+
+        
+        document.writeln("<h1>Q7</h1>");
+
+        var p1=900,p2=800,q1=8,q2=3,Shipping=100;
+        document.writeln("<h1>Shopping cart</h1>");
+        document.writeln("<p>Price of item 1 is: "+p1+"</p>");
+        document.writeln("<p>Ordered quantity of item 1 is: "+q1+"</p>");
+        document.writeln("<p>Price of item 2 is: "+p2+"</p>");
+        document.writeln("<p>Ordered quantity of item 2 is: "+p1+"</p>");
+        document.writeln("<p>Shipping charges are: "+Shipping+"</p>");
+        document.writeln("<p>total cost of your order is: "+((p1*q1)+(p2*q2)+Shipping)+"</p>")
+
+        
+        document.writeln("<h1>Q8</h1>");
+
+        var total=+prompt("enter total marks of subject");
+        var marks=+prompt("enter marks obtained in subject ");
+        document.writeln("<h1>Marks Sheet</h1>");
+        document.writeln("<p>total marks: "+total+"</p>");
+        document.writeln("<p>marks obtained: "+marks+"</p>");
+        document.writeln("<p>Your percentage marks are : <strong>"+(marks/total*100)+"%"+"</strong></p>");
+        
+
+        document.writeln("<h1>Q9</h1>");
+        
+        var dollars=10,riyals=25;
+        document.writeln("<h1>currency in PKR</h1>");
+        document.writeln("<p>total currency in PKR is : "+((dollars*104.80)+(riyals*28))+"</p>");
+
+
+
+        document.writeln("<h1>Q10</h1>");
+        
+        var s=10;
+        document.writeln("<p>result of (number+5)*10/2 is : "+((s+5)*10/2)+"</p>");
+
+
+
+        document.writeln("<h1>Q11</h1>");
+        
+        var current=2020,birth=1998;
+        document.writeln("<h1>Age Calculator</h1>");
+        document.writeln("<p>current year is : "+current+"</p>");
+        document.writeln("<p>birth year is : "+birth+"</p>");
+        document.writeln("<p>your age is : "+(current-birth)+"</p>");
+
+
+
+        document.writeln("<h1>Q12</h1>");
+        
+        var radius=prompt("enter radius of circle");
+        document.writeln("<h1>Geometrizer</h1>");
+        document.writeln("<p>radius of circle is : "+radius+"</p>");
+        document.writeln("<p>circumference of circle is : "+(2*3.14*radius)+"</p>");
+        document.writeln("<p>area of circle is : "+(3.14*radius*radius)+"</p>");
+
+
+        document.writeln("<h1>Q13</h1>");
+        
+        var snack="chips",age=22,max=60,item=3;
+        document.writeln("<h1>Lifetime Supply Calculator</h1>");
+        document.writeln("<p>favorite snack is : "+snack+"</p>");
+        document.writeln("<p>current age is : "+age+"</p>");
+        document.writeln("<p>maximum age is : "+marks+"</p>");
+        document.writeln("<p>estimated snacks per day : "+item+"</p>");
+        document.writeln("<p>You will need "+((max-age)*item)+" "+snack+" to last you until the ripe old age of  "+max+"</p>");
+
 
 
 
@@ -184,6 +305,159 @@ document.writeln("<h1>Chapter 6-9</h1>");
 
 
 document.writeln("<h1>Chapter 9-11</h1>");
+
+            document.writeln("<h1>Q1</h1>");
+            var a=prompt("enter name of a city").toLowerCase();
+            if(a==="karachi"){
+                alert("welcome to the city of lights");
+            }
+
+
+
+            document.writeln("<h1>Q2</h1>");
+            var a=prompt("enter your gender").toLowerCase();
+            if(a==="male"){
+                document.writeln("Good Morning Sir");
+            }
+            if(a==="female"){
+                document.writeln("Good Morning Ma`am");
+            }
+
+
+
+
+            document.writeln("<h1>Q3</h1>");
+            var a=prompt("enter color of road traffic signal").toLowerCase(),message;
+            if(a==="red"){
+                message="Must stop";
+            }
+            if(a==="green"){
+                message="Move now";
+            }
+            if(a==="yellow"){
+                message="Ready to move";
+            }
+            document.writeln(message)
+
+
+
+            document.writeln("<h1>Q4</h1>");
+            var a=+prompt("enter remaining fuel in liters");
+            if(a<0.25){
+                document.writeln("<p>Please refill the fuel in your car</p>");
+            }
+
+
+
+
+            document.writeln("<h1>Q5</h1>");
+
+            var a = 4; 
+            if (++a === 5){ alert("given condition for variable a is true"); }
+
+            var b = 82; 
+            if (b++ === 83){ alert("given condition for variable b is true");}
+
+            var c = 12; 
+            if (c++ === 13){ alert("condition 1 is true"); } 
+            if (c === 13){ alert("condition 2 is true"); } 
+            if (++c < 14){ alert("condition 3 is true"); } 
+            if(c === 14){ alert("condition 4 is true"); }
+
+            var materialCost = 20000; 
+            var laborCost = 2000; 
+            var totalCost = materialCost + laborCost; 
+            if (totalCost === laborCost + materialCost){ alert("The cost equals"); }
+
+            if (true){ alert("True"); }
+            if (false){ alert("False");}
+
+            if("car" < "cat"){ alert("car is smaller than cat");}
+
+
+            document.writeln("<h1>Q6</h1>");
+
+
+            var total=+prompt("enter total marks of subject");
+            var marks=+prompt("enter marks obtained in subject "),percentage=marks/total*100,grade,remarks;
+            document.writeln("<h1>Marks Sheet</h1>");
+            document.writeln("<p>total marks: "+total+"</p>");
+            document.writeln("<p>marks obtained: "+marks+"</p>");
+            document.writeln("<p>Your percentage marks are : <strong>"+percentage+"%"+"</strong></p>");
+            if(percentage>=80){
+                grade="A-one";
+                remarks="Excellent";
+            }else if(percentage>=70){
+                grade="A";
+                remarks="Good";
+            }else if(percentage>=60){
+                grade="B";
+                remarks="You need to improve";
+            }else if(percentage<60){
+                grade="fail";
+                remarks="sorry";
+            }
+            document.writeln("<p>Grade: "+grade+"</p>");
+            document.writeln("<p>Remarks: "+remarks+"</p>");
+
+
+
+            document.writeln("<h1>Q7</h1>");
+
+            var secret=8;
+            var guess=+prompt("guess any number b/t 0-10");
+
+                if(guess===secret){
+                    document.writeln("<p>you guessed the correct number : "+secret+"</p>");
+            }
+            else {
+                document.writeln("<p>you guessed a wrong number : "+guess+"</p>");
+            }
+
+
+            document.writeln("<h1>Q8</h1>");
+
+            var num=+prompt("enter any number");
+
+            if(num%3==0){
+                document.writeln("<p>number is divisible by 3 </p>");
+            }
+            else{
+                document.writeln("<p>number is not divisible by 3 </p>");
+            }
+
+            document.writeln("<h1>Q9</h1>");
+
+            var num=+prompt("enter any number");
+
+            if(num%2==0){
+                document.writeln("<p>number is even </p>");
+            }
+            else{
+                document.writeln("<p>number is odd </p>");
+            }
+
+
+            document.writeln("<h1>Q10</h1>");
+
+            var num=+prompt("enter temperature");
+            if(num>40){document.writeln("<p>It is too hot outside </p>");}
+            else if(num>30){document.writeln("<p>The Weather today is Normal</p>");}
+            else if(num>20){document.writeln("<p>Today’s Weather is cool </p>");}
+            else if(num>40){document.writeln("<p>OMG! Today’s weather is so Cool</p>");}
+
+
+
+            document.writeln("<h1>Q11</h1>");
+
+            var num1=+prompt("enter first number");
+            var num2=+prompt("enter second number");
+            var op=prompt("enter operator + - * / % ");
+            if(op==="+"){document.writeln("<p>"+num1+" "+op+" "+num2+" is "+num2+num1+"</p>");}
+            else if(op==="-"){document.writeln("<p>"+num1+" "+op+" "+num2+" is "+num2-num1+"</p>");}
+            else if(op==="*"){document.writeln("<p>"+num1+" "+op+" "+num2+" is "+num2*num1+"</p>");}
+            else if(op==="/"){document.writeln("<p>"+num1+" "+op+" "+num2+" is "+num2/num1+"</p>");}
+            else if(op==="%"){document.writeln("<p>"+num1+" "+op+" "+num2+" is "+num2%num1+"</p>");}
 
 
 
