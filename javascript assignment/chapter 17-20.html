@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter 17-20</title>
+</head>
+<body>
+    
+    <script>
+        var a=[[]];
+        document.writeln("<h1>Q1</h1>");
+        document.writeln("<p>"+a+"</p>");
+
+        document.writeln("<h1>Q2</h1>");
+        var b=[[0,1,2,3],[1,0,1,2],[2,1,0,1]];
+        document.writeln("<p>"+b[0]+"</p><p>"+b[1]+"</p><p>"+b[2]+"</p>");
+
+        document.writeln("<h1>Q3</h1>");
+        var x=[1,2, 3, 4, 5, 6, 7, 8, 9, 10];
+        for (const c of x) {
+            document.writeln("<p>"+c+"</p>");
+        };
+
+        document.writeln("<h1>Q4</h1>");
+        var a=prompt("enter any number to find its table");
+        var b=prompt("enter lenght for the table");
+        for (var i=1;i<=b;i++) {
+            document.writeln("<p>"+a+" * "+i+" ="+a*i+"</p>");
+        };
+
+        document.writeln("<h1>Q5</h1>");
+        var fruits = ["apple", "banana", "mango", "orange", "strawberry"]
+        for (const c of fruits) {
+            document.writeln("<p>"+c+"</p>");
+        };
+        document.writeln("<br>");
+        for (const c in fruits) {
+            document.writeln("<p>element at index "+c +" is "+fruits[c]+"</p>");
+        };
+
+        document.writeln("<h1>Q6</h1>");
+        document.writeln("<h3>counting</h3>");
+        for (var i=1;i<=15;i++) {
+            document.writeln(i+", ");
+        };
+        document.writeln("<h3>reverse counting</h3>");
+        for (var i=10;i>=1;i--) {
+            document.writeln(i+", ");
+        };
+        document.writeln("<h3>even numbers</h3>");
+        for (var i=0;i<=20;i++) {
+            if(i%2==0){
+                document.writeln(i+", ");
+            }
+        };
+        document.writeln("<h3>odd numbers</h3>");
+        for (var i=0;i<=20;i++) {
+            if(i%2!=0){
+                document.writeln(i+", ");
+            }
+            
+        };
+        document.writeln("<h3>series numbers</h3>");
+        for (var i=1;i<=20;i++) {
+            if(i%2==0){
+                document.writeln(i+"k, ");
+            }
+        };
+
+        document.writeln("<h1>Q7</h1>");
+        var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+        var b=prompt("enter to check for availibility of item");
+        
+        if(A.indexOf(b)===-1){
+            document.writeln("<p>"+b+" is not available in bakery</p>");
+        }else{  
+            document.writeln("<p>"+b+" is available at index "+A.indexOf(b)+" in bakery</p>");
+        }
+        
+        document.writeln("<h1>Q8</h1>");
+        var A = [24, 53, 78, 91, 12],b=0;
+        document.writeln("<p>Array items "+A+" </p>");
+        for(x of A){
+            if(x>b){
+                b=x;
+            }
+        }document.writeln("<p>"+b+" is the largest number </p>");
+
+        document.writeln("<h1>Q9</h1>");
+        var A = [24, 53, 78, 91, 12],b=999999;
+        document.writeln("<p>Array items "+A+" </p>");
+        for(x of A){
+            if(x<b){
+                b=x;
+            }
+        }document.writeln("<p>"+b+" is the smallest number </p>");
+
+        document.writeln("<h1>Q10</h1>");
+        for (var i=1;i<=20;i++) {
+            document.writeln(5*i+",");
+        };
+
+
+
+    </script>
+</body>
+</html>

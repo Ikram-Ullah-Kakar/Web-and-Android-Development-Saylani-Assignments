@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter 12-13</title>
+</head>
+<body>
+    
+    <script>
+        document.writeln("<h1>Q1</h1>");
+        var match_u_case=/[A-Z]/,match_l_case=/[a-z]/,match_number=/[0-9]/;
+        var inp=prompt("enter any character (string/number)");
+        if(!inp.search(match_u_case)){
+            document.writeln("<p>you entered a upper case letter</p>");
+        }
+        if(!inp.search(match_l_case)){
+            document.writeln("<p>you entered a lower case letter</p>");
+        }
+        if(!inp.search(match_number)){
+            document.writeln("<p>you entered a number</p>");
+        }
+
+
+        document.writeln("<h1>Q2</h1>");
+        var a=prompt("enter first integer"),b=prompt("enter second integer");
+        if(a===b){
+            document.writeln("<p>both numbers are equal</p>");
+        }
+        if(a<b){
+            document.writeln("<p>largest number is "+b+"</p>");
+        }
+        if(a>b){
+            document.writeln("<p>largest number is "+a+"</p>");
+        }
+
+
+        document.writeln("<h1>Q3</h1>");
+        var a=+prompt("enter any integer");
+        if(a===0){
+            document.writeln("<p>number is zero</p>");
+        }
+        else if(a<0){
+            document.writeln("<p> "+a+" is negative number</p>");
+        }
+        else{
+            document.writeln("<p> "+a+" is positive number</p>");
+        }
+        
+
+        document.writeln("<h1>Q4</h1>");
+        var match=/[AEIOU]/i;
+        var inp=prompt("enter any character (string)");
+        if(!inp.search(match)){
+            document.writeln("<p>character is a vowel</p>");
+        }
+        else{
+            document.writeln("<p>character is not a vowel</p>");
+        }
+
+
+
+        document.writeln("<h1>Q5</h1>");
+        var match_pass="kakar1";
+        var pass=prompt("enter the correct password");
+        while(pass===""){
+            pass=prompt("enter the correct password","please enter your password");
+        }
+        if(pass===match_pass){
+            alert("you entered the correct password");
+        }
+        else{
+            alert("you entered a wrong password");
+        }
+
+
+        document.writeln("<h1>Q6</h1>");
+        var greeting; 
+        var hour = 13; 
+        if (hour < 18) { greeting = "Good day"; 
+    }
+        else{ greeting = "Good evening";
+        }
+        document.writeln("<p>"+greeting+"</p>");
+
+
+        document.writeln("<h1>Q7</h1>");
+        var message; 
+        var time = +prompt("enter time in 24 hour format i.e 1900=7pm"); 
+        if (time>=0000&&time<1200) { message = "Good morning!"; 
+        }
+        else if (time>=1200&&time<1700) { message = "Good afternoon"; 
+        }
+        else if (time>=1200&&time<1700) { message = "Good afternoon"; 
+        }
+        else if (time>=1700&&time<2100) { message = "Good evening"; 
+        }else if (time>=2100&&time<2359) { message = "Good night"; 
+        }
+        document.writeln("<p>"+message+"</p>");
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
