@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter 26-30</title>
+</head>
+<body>
+    <script>
+document.writeln("<h1>Q1</h1>");
+        var a=+prompt("enter any positive number");
+        document.writeln("<p> number: "+a+"</p>");
+        document.writeln("<p> rounded: "+Math.round(a)+"</p>");
+        document.writeln("<p> ceil: "+Math.ceil(a)+"</p>");
+        document.writeln("<p> floor: "+Math.floor(a)+"</p>");
+
+
+
+
+document.writeln("<h1>Q2</h1>");
+        var a=+prompt("enter any negative floating-point number");
+        document.writeln("<p> number: "+a+"</p>");
+        document.writeln("<p> rounded: "+Math.round(a)+"</p>");
+        document.writeln("<p> ceil: "+Math.ceil(a)+"</p>");
+        document.writeln("<p> floor: "+Math.floor(a)+"</p>");
+
+
+
+
+
+document.writeln("<h1>Q3</h1>");
+        var a=+prompt("enter any number to find its absolute");
+        document.writeln("<p> absolute value of: "+a+" is "+Math.abs(a)+"</p>");
+
+
+
+
+
+document.writeln("<h1>Q4</h1>");
+        var dice=[1,2,3,4,5,6];
+        document.writeln("<p> random dice value: "+dice[Math.floor(Math.random() * dice.length)]+"</p>");
+
+
+document.writeln("<h1>Q5</h1>");
+        if(Math.ceil(Math.random() * 2)==1){
+            document.writeln("<p> 1</p>");
+            document.writeln("<p> random dice value: Tails</p>");
+        }else{
+            document.writeln("<p> 2</p>");
+            document.writeln("<p> random dice value: Heads</p>");
+        }
+        
+
+
+
+document.writeln("<h1>Q6</h1>");
+        document.writeln("<p> random value b/w 1 and 100: "+Math.ceil(Math.random() * 100)+"</p>");
+
+
+
+
+document.writeln("<h1>Q7</h1>");
+        var weight=prompt("enter your weight in kgs");
+        document.writeln("<p> weight of user is :  "+weight.slice(0,weight.search(/[a-z]/))+" kilograms</p>");
+        
+
+
+
+
+
+document.writeln("<h1>Q8</h1>");
+        var num = Math.ceil(Math.random() * 10);
+        const gnum = prompt('Guess the number between 1 and 10');
+        if (gnum == num)
+        document.writeln("<p> congratulations you guessed correct</p>");
+        else
+        document.writeln("<p>sorry try again. correct number was "+num+"</p>");
+        
+
+
+
+
+    </script>
+</body>
+</html>

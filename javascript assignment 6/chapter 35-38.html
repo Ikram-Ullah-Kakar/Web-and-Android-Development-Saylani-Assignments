@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter 35-38</title>
+</head>
+<body>
+    <script>
+        document.writeln("<h1>Q1</h1>");
+             function date(){
+                var d= new Date();
+                return document.writeln("<p>"+d.constructor()+"</p>");
+             }
+             date();
+
+        
+        document.writeln("<h1>Q2</h1>");
+            function name(first,last){
+                
+                return document.writeln("<p>Welcome to the page "+(first+last)+"</p>");
+             }
+             name("Ikram", "Kakar");
+        
+        
+        
+        
+        document.writeln("<h1>Q3</h1>");
+            function add(first,last){
+                
+                return document.writeln("<p> "+first+" + "+last+" = "+(first+last)+"</p>");
+             }
+             var a=+prompt("enter first number"),b=+prompt("enter 2nd number to sum");
+             add(a, b);
+        
+        
+        document.writeln("<h1>Q4</h1>");
+               function calculator(a,b,op){
+                   if(op==="+"){
+                       return a+b;
+                   }
+                   else if(op==="-"){
+                       return a-b;
+                   }
+                   else if(op==="*"){
+                       return a*b;
+                   }
+                   else if(op==="/"){
+                       return a/b;
+                   }
+                   
+               }
+               var a=+prompt("enter first number"),b=+prompt("enter 2nd number to sum"),op=prompt("enter the operator to perform");
+               var result=calculator(a,b,op);
+               document.writeln("<p> "+a+" "+op+" "+b+" = "+result+"</p>");
+               
+        
+        document.writeln("<h1>Q5</h1>");
+            function square(a){
+                
+                return document.writeln("<p> "+a+" square  = "+(a*a)+"</p>");
+             }
+             var a=+prompt("enter a number to find its square");
+             square(a);
+        
+        document.writeln("<h1>Q6</h1>");
+        function fact(a){
+                var fact=1;
+                for(var i=1;i<=a;i++){
+                    fact=fact*i;
+                }
+                return fact;
+             }
+             var a=+prompt("enter a number to find its factorial");
+            var res=fact(a);
+            document.writeln("<p>factorial of "+a+" is= "+res+"</p>");
+        
+        
+        document.writeln("<h1>Q7</h1>");
+        function count(first,last){
+            var count=first;
+                for(var i=first;i<=last;i++){
+                    document.writeln("<p> counting from "+first+" to "+last+" = "+(count)+"</p>");
+                    count=count+1;
+                    
+                }
+             }
+             var a=+prompt("enter a number to start counting from"),b=+prompt("enter a number to count till");
+             count(a, b);
+        
+        
+        
+        document.writeln("<h1>Q8</h1>");
+               function calculateHypotenuse(a,b){
+                    function calculateSquare(a1){                
+                        return a1*a1;
+                    }
+                       return Math.sqrt(calculateSquare(a)+calculateSquare(b));
+                   
+               }
+               var a=+prompt("enter value of base"),b=+prompt("enter value of perpendicular");
+               document.writeln("<p> hypotenuse of triangle is "+calculateHypotenuse(a,b)+"</p>");
+             
+
+
+        document.writeln("<h1>Q9</h1>");
+            function area(a,b){
+                return a*b;           
+               }
+               var h=+prompt("enter height of rectangle"),w=+prompt("enter width for rectangle");
+               document.writeln("<p> area of rectangle is "+area(3,3)+"    (arguments by value)</p>");
+               document.writeln("<p> area of rectangle is "+area(h,w)+"    (arguments by variables)</p>");
+        
+        
+        document.writeln("<h1>Q10</h1>");
+        
+               function pelindrome(a){
+                var x="";
+                    for (var i=a.length-1;i>=0;i--) {
+                        x=x+a[i];
+                    }
+                    if(a===x){
+                        return document.writeln("<p>"+a+" is a pelindrome</p>");
+                    }
+                    else{
+                        return document.writeln("<p>"+a+" is not a pelindrome</p>");
+                    }
+               }
+               var a=prompt("enter string to check for pelindrome");
+               pelindrome(a);
+        
+        document.writeln("<h1>Q11</h1>");
+               function capitalize(a){
+                   var c='';
+                    var b=a.split(" ");
+                    b.forEach(value=>{c=c+value[0].toUpperCase()+value.slice(1,)+" "});
+                    return c;
+               }var a=prompt("enter string to capatilize 1st character of each word");
+               document.writeln("<p>"+capitalize(a)+" </p>");
+               
+                
+        
+        document.writeln("<h1>Q12</h1>");
+            function long_string(a){
+                   
+                    var b=a.split(" ");
+                    var max = b[0];
+                    var maxIndex = 0;
+
+                for (var i = 1; i < b.length; i++) {
+                    if (b[i].length > max.length) {
+                        maxIndex = i;
+                        max = b[i];
+                    } }
+                return max;
+               }
+
+               var a=prompt("enter a sentence to find longest word");
+               document.writeln("<p>"+long_string(a)+" </p>");
+               
+        
+        
+        document.writeln("<h1>Q13</h1>");
+            function occur(a,char){
+                   
+                   var b=new RegExp(char,'ig');
+                   
+                   return document.writeln("<p> there are "+a.match(b).length+" occurences of the character "+char+"</p>");
+                
+              }
+              var a=prompt("enter any word/sentence");
+              var b=prompt("enter a character to find tis occurences ");
+            occur(a,b);
+               
+        
+        document.writeln("<h1>Q14</h1>");
+            function calcCircumference(r){
+                return document.writeln("<p> the circumference of the circle is "+(2*Math.PI*r)+"</p>");
+            }
+            function calcArea(r){
+                return document.writeln("<p> the area of the circle is "+(r*r)+"</p>");       
+                }
+                var r=+prompt("enter radius of the circle ");
+                calcCircumference(r);
+                calcArea(r);
+</script>
+    
+</body>
+</html>

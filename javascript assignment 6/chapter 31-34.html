@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter 31-34</title>
+</head>
+<body>
+    <script>
+        document.writeln("<h1>Q1</h1>");
+        var d= new Date();
+        document.writeln("<p>"+d.constructor()+"</p>");
+
+
+        
+        document.writeln("<h1>Q2</h1>");
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        document.writeln("<p>"+months[d.getMonth()]+"</p>");      
+        
+        
+        
+        
+        document.writeln("<h1>Q3</h1>");
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        document.writeln("<p>"+days[d.getDay()]+"</p>");    
+        
+        
+        document.writeln("<h1>Q4</h1>");
+               if(d.getDay()===0||d.getDay()===6){
+                document.writeln("<p>It's fun day</p>");   
+               }
+        
+        document.writeln("<h1>Q5</h1>");
+            if(d.getDate()<16){
+                document.writeln("<p>First fifteen days of the month</p>");   
+               } 
+            else{
+                document.writeln("<p>Last days of the month</p>");   
+               }
+        
+        
+        document.writeln("<h1>Q6</h1>");
+        document.writeln("<p>current date: "+d.constructor()+"</p>");       
+        document.writeln("<p>time elapsed in milliseconds 1 jan 1970: "+d.getTime()+"</p>");   
+        document.writeln("<p>time elapsed in minutes since 1 jan 1970: "+d.getTime()/1000/60+"</p>");   
+        
+        
+        document.writeln("<h1>Q7</h1>");
+            if(d.getHours()<12){
+                alert("it's AM")
+                document.writeln("<p>it's AM</p>");   
+               } 
+            else{
+                alert("it's PM")
+                document.writeln("<p>it's PM</p>");   
+               }
+        
+        
+        
+        document.writeln("<h1>Q8</h1>");
+            var date=new Date(2020, 11, 31, 0, 0, 0, 0);
+            document.writeln("<p>current date: "+date+"</p>");       
+
+
+
+
+        document.writeln("<h1>Q9</h1>");
+            var date=new Date(2015, 05, 18, 0, 0, 0, 0),diff=d.getTime()-date.getTime();
+
+            document.writeln("<p>"+Math.floor(diff/1000/3600/24)+" days have been passed since 1st ramazan 2015</p>");
+        
+        
+        document.writeln("<h1>Q10</h1>");
+            var date=new Date(2015, 0, 1, 0, 0, 0, 0),diff=d.getTime()-date.getTime();
+            document.writeln("<p>"+Math.floor(diff/1000)+" seconds have been passed since 1st jan 2015</p>");
+        
+        document.writeln("<h1>Q11</h1>");
+                var d = new Date();
+                d.setHours(d.getHours()+1);
+                document.writeln("<p>current time: "+d+"</p>"); 
+                d.setHours(d.getHours()-1);
+                document.writeln("<p>1 hour ago it was: "+d+"</p>"); 
+        
+        document.writeln("<h1>Q12</h1>");
+            var d = new Date();
+            var d1=new Date();   
+            document.writeln("<p>current date: "+d+" </p>");
+            d.setFullYear(d.getFullYear()-100);
+            document.writeln("<p>100 years ago it was "+d+" </p>");
+            alert("current date: "+d1+"\n 100 years ago it was "+d);
+        
+
+        document.writeln("<h1>Q13</h1>");
+            var age=+prompt("enter your age ");
+            var d=new Date();
+            var ageYear=d.getFullYear()-age;   
+            document.writeln("<p>your age is: <strong>"+21+"</strong></p>");
+            document.writeln("<p>your birth year is: <strong>"+ageYear+"</strong></p>");
+    
+        
+        
+        document.writeln("<h1>Q14</h1>");
+            document.writeln("<h1>K-electric Bill</h1>");
+            document.writeln("<p>Customer name: <strong>Ikram Ullah Kakar</strong></p>");
+            var d=new Date();
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.writeln("<p>Month: <strong>"+months[d.getMonth()]+"</strong></p>");
+            var units=410,charges=16,netcharges=units*charges,surcharge=350,grosscharge=netcharges+surcharge;
+            document.writeln("<p>number of units: <strong>"+units+"</strong></p>");
+            document.writeln("<p>charges per unit: <strong>"+charges+"</strong></p>");
+            document.writeln("<p>number of units: <strong>"+netcharges+"</strong></p>");
+            document.writeln("<p>charges per unit: <strong>"+surcharge+"</strong></p>");
+            document.writeln("<p>charges per unit: <strong>"+grosscharge+"</strong></p>");
+
+</script>
+    
+</body>
+</html>

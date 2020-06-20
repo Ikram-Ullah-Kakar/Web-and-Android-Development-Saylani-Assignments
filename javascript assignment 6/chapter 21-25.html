@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter 21-25</title>
+</head>
+<body>
+    
+    <script>
+        
+        document.writeln("<h1>Q1</h1>");
+        var first=prompt("enter your first name "),last=prompt("enter your last name ");
+        var fullName=first +" "+last;
+        document.writeln("<p> Welcome to the page "+fullName+"</p>");
+
+
+        document.writeln("<h1>Q2</h1>");
+        var b=prompt("input your favorite mobile phone model.");
+        document.writeln("<p> My  favorite mobile is: "+b+"</p>");
+        document.writeln("<p> Length of string: "+b.length+"</p>");
+        
+        
+
+        document.writeln("<h1>Q3</h1>");
+        var b="Pakistani";
+        document.writeln("<p> String: "+b+"</p>");
+        document.writeln("<p>index of n is: "+b.indexOf("n")+"</p>");
+
+
+        document.writeln("<h1>Q4</h1>");
+        var b="Hello World";
+        document.writeln("<p> String: "+b+"</p>");
+        document.writeln("<p>index of n is: "+b.lastIndexOf("l")+"</p>");
+
+        document.writeln("<h1>Q5</h1>");
+        var b="Pakistani";
+        document.writeln("<p> String: "+b+"</p>");
+        document.writeln("<p>character at index 3: "+b[3]+"</p>");
+
+        document.writeln("<h1>Q6</h1>");
+        var first=prompt("enter your first name "),last=prompt("enter your last name ");
+        var fullName=first.concat(" ",last);
+        document.writeln("<p> Welcome to the page "+fullName+"</p>");
+
+        document.writeln("<h1>Q7</h1>");
+        var b="Hyderabad";
+        document.writeln("<p> city: "+b+"</p>");
+        document.writeln("<p>after replacment: "+b.replace("Hyder","Islam")+"</p>");
+        
+        
+        document.writeln("<h1>Q8</h1>");
+        var message = "Ali and Sami are best friends. They play cricket and football together.";
+        document.writeln("<p> message: "+message+"</p>");
+        document.writeln("<p>after replacment: "+message.replace(/and/g,"&")+"</p>");
+
+        document.writeln("<h1>Q9</h1>");
+        var b="472";
+        document.writeln("<p> value: "+b+"</p>");
+        document.writeln("<p>type: "+typeof(b)+"</p>");
+        document.writeln("<p> value: "+Number(b)+"</p>");
+        document.writeln("<p>type: "+typeof(Number(b))+"</p>");
+
+
+
+        document.writeln("<h1>Q10</h1>");
+        var b=prompt("input any text.");
+        document.writeln("<p> text entered: "+b+"</p>");
+        document.writeln("<p> uppercase: "+b.toUpperCase()+"</p>");
+
+
+        document.writeln("<h1>Q11</h1>");
+        var b=prompt("input any text.");
+        document.writeln("<p> text entered: "+b+"</p>");
+        document.writeln("<p> title case: "+b[0].toUpperCase()+b.slice(1,)+"</p>");
+
+        
+        document.writeln("<h1>Q12</h1>");
+        var num = 35.36 ,s=num.toString(); 
+        document.writeln("<p> number: "+num+"</p>");
+        document.writeln("<p> result: "+s.slice(0,2)+s.slice(3,)+"</p>");
+
+
+        document.writeln("<h1>Q13</h1>");
+        var a=prompt("enter your username"); 
+        while(/[@.,!]/.test(a)){a=prompt("enter correct username",a); }
+        document.writeln("<p> username: "+a+"</p>");
+
+
+
+
+        document.writeln("<h1>Q14</h1>");
+        var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+        var b=prompt("welcome to backery want some order ");
+        var regex = new RegExp(b , "i");
+        if(regex.test(A)){
+            document.writeln("<p>"+b+" is available at "+A.indexOf(b)+"</p>");
+        }
+        else{
+            document.writeln("<p> Sorry "+b+" is not available in our bakery</p>");
+        }
+
+        document.writeln("<h1>Q15</h1>");
+        var b=prompt("enter your password");
+        var regex = /[a-z][0-9]/i;
+        if(!b.length<6){
+            if(regex.test(b)){
+            document.writeln("<p>password entered "+b+"</p>");
+        }
+            else{
+            prompt("enter a valid password");
+            }}
+        else{
+            prompt("enter a valid password");
+        }
+
+
+
+        document.writeln("<h1>Q16</h1>");
+        var university = "University of Karachi";
+        for (var i = 0; i < university.length; i++) {
+            document.writeln("<p>"+university.charAt(i)+"</p>");;
+            }
+
+
+        document.writeln("<h1>Q17</h1>");
+        var b=prompt("input any text.");
+        document.writeln("<p> text entered: "+b+"</p>");
+        document.writeln("<p> last character: "+b[b.length-1]+"</p>");
+
+
+
+        document.writeln("<h1>Q18</h1>");
+        var b="The quick brown fox jumps over the lazy dog"
+        document.writeln("<p> text: "+b+"</p>");
+        document.writeln("<p> there are "+b.match(/the/ig).length+" occurences of the word 'the'</p>");
+
+
+    </script>
+</body>
+</html>
