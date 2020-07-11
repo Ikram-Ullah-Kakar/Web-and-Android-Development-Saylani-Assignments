@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>STOPWATCH</title>
+<style type="text/css">
+body {
+    margin:10px 25px; padding:1px;
+    background-color:#678; color:#eee;
+    font-family:"Arial", serif; font-size:0.7em; text-align:center;
+}
+#stopwatch {
+  background: #4d6277;
+  border: 1px solid #999;
+  padding: 20px;
+  border-radius: 10px;
+  max-width:50%;
+  box-sizing: 100%;
+  margin: auto auto;
+  margin-top: 5%;
+}
+#time {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+#btn{
+  width: 25%;
+  box-sizing: padding-box;
+  padding: 10px;
+  display: inline-block;
+  background: #aa2f2f;
+  border: 0;
+  color: #fff;
+  margin-top: 1%;
+  border-radius: 20px;
+}
+#txt{
+    color: #5a200e;
+    font-size: 15px;
+}
+
+p{
+    color: #333;
+}
+
+a {
+    
+    font-family:"Lucida", serif; font-size:1.0em; color:#333; text-align:center;
+    cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+    <h1 style="margin-top: 5%;">STOPWATCH</h1>
+    <div id="stopwatch">
+        <p id="time"><span id="hr">00</span><span id="txt"> Hrs</span> : <span id="min">00</span> <span id="txt"> Mins</span>:
+             <span id="sec">00</span><span id="txt"> Secs</span> : <span id="msec">000</span><span id="txt"> mSecs</span></p>        
+        <a id="btn" type="button" onclick="start()">START</a>
+        <a id="btn" type="button" onclick="stop()">STOP</a>
+        <a id="btn" type="button" onclick="reset()">RESET</a>
+    </div>
+    
+ 
+    <script src="app.js"></script>
+</body>
+
+</html>
