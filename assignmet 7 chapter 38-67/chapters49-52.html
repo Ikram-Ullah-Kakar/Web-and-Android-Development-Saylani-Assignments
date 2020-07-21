@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapters49-52</title>
+
+    <style>
+        * {box-sizing: border-box}
+
+
+  input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+
+
+
+.container {
+  padding: 16px;
+  width: 50%;
+  margin: 0 auto;
+}
+.clearfix{
+    margin: 0 auto;
+    width: 50%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#more,#edit {display: none;}
+
+    </style>
+    
+</head>
+<body>
+    
+  <!-- Q1 -->
+<h1>Q1</h1>
+
+<form id="add" class="container" action="" method="POST" style="border:1px solid #ccc">
+    <div>
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" id="email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+
+      <div class="clearfix">
+        <button type="button" onclick="display();" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+
+  <div> <form class="container" style="border:1px solid #ccc">
+    <div>
+      <h1>Sign Up data</h1>
+      
+  
+      <label ><b>Email</b></label>
+      <input id="email_display" disabled>
+  
+      <label ><b>Password</b></label>
+      <input id="psw_display"  disabled>
+
+      
+    </div>
+  </form></div>
+  <script>
+      function display(){
+        document.getElementById("email_display").value=document.getElementById("email").value;
+        document.getElementById("psw_display").value=document.getElementById("psw").value;
+        document.getElementById("email").value="";
+        document.getElementById("psw").value="";
+      }
+      
+  </script>
+
+
+
+<!-- Q2 -->
+<h1>Q2</h1>
+
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, 
+        nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">
+          erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. 
+        In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gr
+        avida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+        <button onclick="display_more()" id="Btn">Read more</button>
+      </div>
+      <script>
+        function display_more() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("Btn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+      </script>
+
+
+
+
+<!-- Q3 -->
+<h1>Q3</h1>
+<form  class="container" action="" method="POST" style="border:1px solid #ccc">
+  <div>
+    <h1>Student Data form</h1>
+    <p>Please fill in this form to create an data.</p>
+    <hr>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter your name" id="name" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" id="emailed" required>
+
+    <label for="rll"><b>Roll number </b></label>
+    <input type="text" placeholder="Enter Roll number" id="rll" name="rll" required>
+
+    <div class="clearfix">
+      <button type="button" class="addbtn" onclick="create();">add to table</button>
+    </div>
+  </div>
+</form>
+
+<table id="myTable">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Roll number</th>
+  </tr>
+  <tr id="0">
+    <td>Smith</td>
+    <td>Smith@gmail.com</td>
+    <td>1</td>
+    <td><Button onclick="this.parentElement.parentElement.remove();">delete</Button></td>
+    <td><button onclick="edit(this.parentElement.parentElement.firstElementChild)">edit row</button></td>
+
+  </tr>
+ 
+  
+</table>
+
+<form id="edit"  class="container" action="" method="POST" style="border:1px solid #ccc">
+  <div>
+    <h1>Student Data form</h1>
+    <p>Please fill in this form to create an data.</p>
+    <hr>
+    <label for="tid"><b>table id</b></label>
+    <input type="text"  id="tid" name="tid" disabled>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter your name" id="ename" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" id="e_emailed" required>
+
+    <label for="rll"><b>Roll number </b></label>
+    <input type="text" placeholder="Enter Roll number" id="erll" name="rll" required>
+
+    <div class="clearfix">
+      <button type="button" class="addbtn" onclick="edited();">save to table</button>
+    </div>
+  </div>
+</form>
+<script>
+
+var i=0;
+function create() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow();
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+
+  row.setAttribute("id", i++);
+  cell1.innerHTML = document.getElementById('name').value;
+  cell2.innerHTML = document.getElementById('emailed').value;
+  cell3.innerHTML = document.getElementById('rll').value;
+  cell4.innerHTML = '<Button onclick="this.parentElement.parentElement.remove();">delete</Button>';
+  cell5.innerHTML = '<button onclick="edit(this.parentElement.parentElement.firstElementChild)">edit row</button>';
+
+}
+
+function edit(data){
+  document.getElementById("edit").style.display='block';
+  var tid = document.getElementById("tid");
+  var ame = document.getElementById("ename");
+  var email = document.getElementById("e_emailed");
+  var roll = document.getElementById("erll");
+  ame.value=data.innerHTML;
+  tid.value=data.parentElement.id;
+  email.value=data.nextElementSibling.innerHTML;
+  roll.value=data.nextElementSibling.nextElementSibling.innerHTML;
+}
+function edited(){
+  var elem=document.getElementById('tid');
+  var ame = document.getElementById("ename");
+  var email = document.getElementById("e_emailed");
+  var roll = document.getElementById("erll");
+  var tr=document.getElementById(elem.value);
+  tr.firstElementChild.innerHTML=ame.value;
+  tr.firstElementChild.nextElementSibling.innerHTML=email.value;
+  tr.firstElementChild.nextElementSibling.nextElementSibling.innerHTML=roll.value;
+
+  document.getElementById("edit").style.display='none';
+}
+</script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapters58-67</title>
+</head>
+<body>
+
+    <div>
+        <h1> DOM </h1>
+        <div id="form-content" class="content">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" />
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" />
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+            </div>
+            <div id="main-content" class="content">
+            <p class="render"> First Name : Alex</p>
+            <p class="render" id="lastName">Last Name: Bank</p>
+            <p class="render"> Email : alexbank@example.com</p>
+            <p class="render"> Country : Pakistan </p>
+            <p class="render"> contact : +92 300 1234567</p>
+        </div>
+        </div>
+        <div id="div1">
+           <h1>ii</h1> 
+        </div>
+        <div id="div2">
+            <h1>iii</h1> 
+         </div>
+    <script>//Q1 i
+        var main=document.getElementById("main-content");
+        //ii
+        for(let i=0; i<main.children.length;i++){
+            var child=document.createElement('p');
+            var node = document.createTextNode(main.children[i].outerHTML);
+
+           child.appendChild(node);
+            
+            var element = document.getElementById("div1");
+            element.appendChild(child);
+        }
+
+
+        //iii
+        for(let i=0; i<document.getElementsByClassName('render').length;i++){
+            var child=document.createElement('p');
+            var node = document.createTextNode(document.getElementsByClassName('render')[i].innerHTML);
+
+           child.appendChild(node);
+            
+            var element = document.getElementById("div2");
+            element.appendChild(child);
+        }
+            
+        //iv
+        document.getElementById("first-name").value='ikram';
+        //v
+        document.getElementById("last-name").value='kakar';
+        document.getElementById("email").value='ikram_kakar1@yahoo.com'
+
+        document.writeln("<h1>Q2</h1>");
+        document.writeln("<h1>i</h1>");
+        document.writeln("<p>form-content nodeType= "+document.getElementById("form-content").nodeType+"</p>");
+
+        document.writeln("<h1>ii</h1>");
+        document.writeln("<p>lastName nodeType= "+document.getElementById("lastName").nodeType+"</p>");
+        document.writeln("<p>lastName parentElement nodeType= "+document.getElementById("lastName").parentElement.nodeType+"</p>");
+        
+        document.writeln("<h1>iii</h1>");
+        document.getElementById("lastName").innerHTML='kakar';
+
+        document.writeln("<h1>iv</h1>");
+        document.writeln("<p>main-content firstChild= "+document.getElementById("main-content").firstElementChild.outerHTML+"</p>");
+        document.writeln("<p>main-content lastChild= "+document.getElementById("main-content").lastElementChild.outerHTML+"</p>");
+        
+        document.writeln("<h1>v</h1>");
+        document.writeln("<p>lastName next siblings= "+document.getElementById("lastName").nextElementSibling.outerHTML+"</p>");
+        document.writeln("<p>lastName previous siblings= "+document.getElementById("lastName").previousElementSibling.outerHTML+"</p>");
+
+        document.writeln("<h1>vi</h1>");
+        document.writeln("<p>email nodeType= "+document.getElementById("email").nodeType+"</p>");
+        document.writeln("<p>email parentElement = "+document.getElementById("email").parentElement.outerHTML+"</p>");
+        
+    </script>
+</body>
+</html>

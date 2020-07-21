@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapters43-48</title>
+</head>
+<body>
+    <h1>Q1</h1>
+    <a href="" onclick="alert('you clicked')">click to trigger event</a>
+    <h1>Q2</h1>
+    <div><img src="1.jpg" alt="" srcset="" width="200px" height="200px" onclick="alert('you clicked image1')">
+    <img src="2.jpg" alt="" srcset="" width="200px" height="200px" onclick="alert('you clicked image2')">
+    <img src="3.jpg" alt="" srcset="" width="200px" height="200px" onclick="alert('you clicked image3')"></div>
+    <h1>Q3</h1>
+    <table >
+        <tr>
+          <th>Index</th>
+          <th>Name</th>
+          <th>Class</th>
+        </tr>
+        <tr id="2nd">
+          <td>0</td>
+          <td>Smith</td>
+          <td>1</td>
+          <td><Button onclick="deleted('2nd')">delete</Button></td>
+        </tr>
+        <tr id="3rd">
+          <td>1</td>
+          <td>Jackson</td>
+          <td>4</td>
+          <td><Button onclick="deleted('3rd')">delete</Button></td>
+        </tr>
+        <tr id="fst">
+            <td>2</td>
+          <td>Smitho</td>
+          <td>10</td>
+          <td><Button onclick="deleted('fst')">delete</Button></td>
+        </tr>
+      </table>
+
+      <h1>Q4</h1>
+    <div><img src="1.jpg" id="img" width="200px" height="200px" onmouseover="document.getElementById('img').src='./2.jpg'" onmouseout="document.getElementById('img').src='./1.jpg'">
+    </div>
+   
+    <h1>Q5</h1>
+    <div><input type="button" id="count" value="0">
+        <input type="button" value="increament counter" onclick="document.getElementById('count').value++">
+        <input type="button" value="decreament counter" onclick="document.getElementById('count').value--">
+
+    </div>
+   <script>
+   
+        
+             function deleted(id){
+                document.getElementById(id).remove();
+                
+             }
+            
+
+       
+    </script>
+
+
+</body>
+</html>

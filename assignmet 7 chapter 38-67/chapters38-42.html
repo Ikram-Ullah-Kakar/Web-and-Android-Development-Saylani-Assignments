@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapters38-42</title>
+</head>
+<body>
+    <script>
+        document.writeln("<h1>Q1</h1>");
+             function power(a,s){
+                
+                return document.writeln("<p>"+a+" raised to power "+s+" = "+a**s+"</p>");
+             }
+            var a= +prompt("enter a number"),b= +prompt("enter power of first number");
+            power(a,b);
+
+        
+        document.writeln("<h1>Q2</h1>");
+            function leap_year(year){
+                if(year/4==0){
+                    return document.writeln("<p> "+year+" is a leap year </p>");
+                }
+                else{
+                    return document.writeln("<p>"+year+" is a not a leap year </p>");
+                }
+             }
+             var a= +prompt("enter a year to check if it is a leap year");
+             leap_year(a);
+        
+        
+        
+        
+        document.writeln("<h1>Q3</h1>");
+            function area(a,b,c,s){
+                   return s*(s-a)*(s-b)*(s-c);
+                   
+               }
+               var a=+prompt("enter length of first side of triangle"),b=+prompt("enter length of second side of triangle"),c=+prompt("enter length of third side of triangle");
+               var s=function(a,b,c){return (a+b+c)/2};
+               document.writeln("<p> area of triangle is "+area(a,b,c,s)+"</p>");
+        
+        
+        document.writeln("<h1>Q4</h1>");
+            function main(a,b,c,t){
+                    var percentage=percent(a,b,c,t),averag=average(a,b,c);
+                    document.writeln("<p>percentage marks= "+percentage+"</p>");
+                    document.writeln("<p>average marks= "+averag+"</p>");
+                }
+                function percent(a,b,c,t){return (a+b+c)*100/(3*t)}
+                function average(a,b,c){return (a+b+c)/3}
+                var a=+prompt("enter marks of first subject"),b=+prompt("enter marks of 2nd subject"),c=+prompt("enter marks of third subject");
+                var t=+prompt("enter total marks of subject");
+                main(a,b,c,t);
+               
+        
+        document.writeln("<h1>Q5</h1>");
+            function indexOf(str,char){
+                for (let index = 0; index < str.length; index++) {
+                    if (str[index] === char) {
+                    return index;
+                    }        
+                }
+                return -1;
+                }
+                var a=prompt("enter a string"),c=prompt("enter a charaacter to find in the string");
+                var res=indexOf(a,c);
+                document.writeln("<p>index of "+c+" in "+a+" = "+res+"</p>");
+        
+        document.writeln("<h1>Q6</h1>");
+            function filter(str){
+                let characterArray = str.split("");
+                return characterArray.map(character => {
+                    if(/[aeiouyAEIOUY]/.test(character)){
+                        character = ""
+                    } else {return character}
+                }).join("");
+                }
+                var a=prompt("enter a senternce to remove vowels");
+                var res=filter(a);
+                document.writeln("<p>senternce without vowels "+res+"</p>");
+        
+        
+        document.writeln("<h1>Q7</h1>");
+        function VowelsCount(str) {
+            let count = 0;
+            for (let i = 1; i < str.length; i++) { 
+                switch (str[i]) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    if (str[i] === str[i - 1]) {
+                    count++;
+                    }
+                    break;
+
+                default:
+                    break;
+                }
+            }
+            return count;
+            }
+        
+            const def = prompt('Enter the string to count two vowels in succession : ');
+            const answer = VowelsCount(def);
+            alert();
+            document.writeln("<p>The count of vowels in succession are " + answer + "</p>");
+
+
+        
+        
+        
+        document.writeln("<h1>Q8</h1>");
+               var km=+prompt("enter the  distance  between two cities in kms");
+               var m=()=>{document.writeln("<p>the  distance  between two cities in meters " + this.km*1000 + "meters</p>");};
+               var feet=()=>{document.writeln("<p>the  distance  between two cities in feets " + this.km*1000*3.2808 + "feets</p>");};
+               var inch=()=>{document.writeln("<p>the  distance  between two cities in inches " + this.km*1000*3.2808*12+ "inches</p>");};
+               var cm=()=>{document.writeln("<p>the  distance  between two cities in centimeters " + this.km*1000*100 + "centimeters</p>");};
+                m();feet();inch();cm();
+        document.writeln("<h1>Q9</h1>");
+            var time=+prompt("enter the  hours worked");
+            var Otime=0;
+            var overtime=()=>{
+                if(time>40){Otime=time-40;
+                    document.writeln("<p>your overtime pay= " + this.Otime*12 + "</p>");}
+                    else{document.writeln("<p>your overtime pay= " + this.Otime*0 + "</p>");}
+            }
+            overtime();
+        document.writeln("<h1>Q10</h1>");
+        var amount=+prompt("input amount to be withdrawn in hundreds");
+        
+        var denomination = ()=>{
+            var hdr=Math.floor(amount/100),fifty=Math.floor(((amount/100)-hdr)*2),tens=((((amount/100)-hdr)*2)-fifty)*5;
+            document.writeln("<p>you will have " + hdr+ " hundred notes "+fifty+" fifty notes and "+Math.round(tens)+" tens notes</p>");
+        }
+        denomination();     
+                
+        
+       
+            
+</script>
+</body>
+</html>
