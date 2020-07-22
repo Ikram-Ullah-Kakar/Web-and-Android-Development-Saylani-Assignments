@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>chapters53-58</title>
+    <style>
+        .format {
+
+            width: 250px;
+            height: 230px;
+
+        }
+
+
+        /* Modal starts */
+
+        /* The Modal (background) */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 500;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Modal Content (image) */
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Add Animation - Zoom in the Modal */
+
+        .modal-open {
+            animation-name: zoomIn;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .modal-close {
+            animation-name: zoomOut;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoomOut {
+            from {
+                transform: scale(1)
+            }
+            to {
+                transform: scale(0)
+            }
+        }
+
+
+
+        /* The Close Button */
+
+        .close {
+            position: absolute;
+            top: 50px;
+            right: 10%;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: normal;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .img-content{
+            width: 200px;
+            height: 200px;
+            padding: 1%;
+            border: 1px solid grey;
+            border-radius: 5%;
+            margin: 1%;
+        }
+        .img-content:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        #images{
+            margin: 0px auto;
+        }
+        h1{
+            margin: 30px 33%;
+            color: #793232;
+            
+        }
+        p{
+            margin: 30px 35.5%;
+            color: #4d1818;
+        }
+        /* modal ends */
+    </style>
+</head>
+
+<body>
+
+    <!-- Modal work -->
+    <div id="modal" class="modal">
+        <span class="close" id="modal-close" onclick="onClosedImagModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+    <div id="images">
+        <h1>My Image Gallery</h1>
+        <p>(Click on any <strong>Image</strong> to View)</p>
+    </div>
+    <script>
+        var path='./images/others/';images=[path+'1.jpg',path+'2.jpg',path+'3.jpg',path+'4.png',path+'5.jpg',
+        path+'6.jpg',path+'7.png',path+'8.jpg',path+'9.jpg',path+'10.jpg',path+'11.jpg',
+        path+'12.jpg',path+'13.jpg',path+'14.png',path+'15.jpg'];
+        var img=document.getElementById("images");
+        for(i of images){
+            img.innerHTML+='<img class="img-content"  src='+i+' onclick="img_click(this)">';
+        };
+
+        function img_click(data){
+            var modal_img=document.getElementById("modal");
+            modal_img.classList.add('modal-open');
+            modal_img.classList.remove("modal-close");
+            modal_img.style.display='block';
+            document.getElementById("modal-img").src=data.src;
+        }
+        function onClosedImagModal(){
+            var modal_img=document.getElementById("modal");
+            modal_img.classList.add('modal-close');
+            modal_img.classList.remove("modal-open");
+            setTimeout(()=>{ modal_img.style.display = "none"; }, 550)
+        }
+
+    </script>
+
+</body>
+
+</html>
