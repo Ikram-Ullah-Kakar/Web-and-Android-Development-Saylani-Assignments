@@ -10,7 +10,7 @@
             height: 230px;
 
         }
-
+        
 
         /* Modal starts */
 
@@ -36,6 +36,8 @@
             display: block;
             width: 80%;
             max-width: 700px;
+            min-width: 400px;
+            
         }
 
         /* Add Animation - Zoom in the Modal */
@@ -112,6 +114,42 @@
             margin: 30px 35.5%;
             color: #4d1818;
         }
+        .zoomIn{
+            position: absolute;
+            top: 50px;
+            right: 20%;
+            color: #f1f1f1;
+            font-size: 20px;
+            font-weight: normal;
+            transition: 0.3s;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            padding: 10px;
+            border: 1px solid #a57d7d;
+            border-radius: 50%;
+        }
+        .zoomOut{
+            position: absolute;
+            top: 50px;
+            right: 30%;
+            color: #f1f1f1;
+            font-size: 20px;
+            font-weight: normal;
+            transition: 0.3s;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            padding: 10px;
+            border: 1px solid #a57d7d;
+            border-radius: 50%;
+        }
+        .zoomIn:hover,
+        .zoomIn:focus,.zoomOut:hover,
+        .zoomOut:focus {
+            color: rgb(214, 210, 210);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
         /* modal ends */
     </style>
 </head>
@@ -121,6 +159,8 @@
     <!-- Modal work -->
     <div id="modal" class="modal">
         <span class="close" id="modal-close" onclick="onClosedImagModal()">&times;</span>
+        <span class="zoomIn"  onclick="zoom_In()">zoomIn</span>
+        <span class="zoomOut"  onclick="zoom_Out()">zoomOut</span>
         <img class="modal-content" id="modal-img">
     </div>
     <div id="images">
@@ -147,7 +187,18 @@
             var modal_img=document.getElementById("modal");
             modal_img.classList.add('modal-close');
             modal_img.classList.remove("modal-open");
+            document.getElementById("modal-img").style.maxWidth="700px";
             setTimeout(()=>{ modal_img.style.display = "none"; }, 550)
+        }
+        function zoom_In(){
+            var modal_img=document.getElementById("modal-img");
+            
+            modal_img.style.width=(modal_img.width+10).toString()+'px';
+            modal_img.style.maxWidth="800px";
+        }
+        function zoom_Out(){
+            var modal_img=document.getElementById("modal-img");
+            modal_img.style.width=(modal_img.width-10).toString()+'px';
         }
 
     </script>
