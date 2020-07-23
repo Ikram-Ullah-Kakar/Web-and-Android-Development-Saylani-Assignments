@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Assignment No 2</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+    .container label {
+        text-transform: uppercase;
+    
+    }
+    div.head{
+        
+        display: inline-block;
+    margin-left: 33%;
+    }
+    .container{
+        background-color: rgb(66, 46, 180);
+        color: white;  
+        padding: 20px;
+    }
+    input{
+        padding: 5px;
+    }
+#first_name{ margin-left: 150px;}
+#last_name{ margin-left: 153px;}
+#dob{ margin-left: 128px;width: 170px;}
+#email_id{ margin-left: 172px;}
+#mnuber{ margin-left: 110px;}
+#gender{ margin-left: 170px;}
+#address{ margin-left: 170px;}
+#city{ margin-left: 203px;}
+#pincode{ margin-left: 165px;}
+#state{ margin-left: 190px;}
+#country{ margin-left: 160px;}
+span#hobbies{ margin-left: 165px;}
+span.qualify_table{ margin-left: 163px;}
+div.qualify_table{ margin-left: 250px;}
+
+
+
+
+</style>
+</head>
+
+<body>
+   <div class="head"> <img src="saylani-logo.png" alt="saylani logo" >
+<h1>STUDENT REGISTRATION FORM</h1>  </div> 
+
+
+
+<div class="container">
+
+<form action="page2.html" method="post" >
+    <label for="first_name">FIRST NAME</label>
+    <input type="text" id="first_name" maxlength="30" required placeholder="Enter first name">(max 30 characters a-z and A-Z)<br>
+    <label for="last_name">Last Name</label>
+    <input type="text" id="last_name" maxlength="30" required placeholder="Enter last name">(max 30 characters a-z and A-Z)<br>
+    <label for="dob">date of birth</label>
+    <input type="date" id="dob" required><br>
+    <label for="email_id">email id</label>
+    <input type="email" id="email_id" maxlength="30" required placeholder="Enter email address"><br>
+    <label for="mnuber">mobile number</label>
+    <input type="number" id="mnuber" maxlength="10" minlength="10" required placeholder="Enter mobile number">(10 digit number)<br>
+    <label for="gender">gender</label>
+    <span id="gender">
+    <input type="radio" id="male" name="gender" value="male" required>
+    Male
+    <input type="radio" id="female" name="gender" value="female" required>
+    Female<br></span>
+    <label for="address">address</label>
+    <textarea name="address" id="address" cols="50" rows="10"></textarea><br>
+    <label for="city">city</label>
+    <input type="text" id="city" maxlength="30" required placeholder="Enter city name">(max 30 characters a-z and A-Z)<br>
+    <label for="pincode">pin code</label>
+    <input type="text" id="pincode" required maxlength="6" placeholder="Enter pincode">(6 digit number)<br>
+    <label for="state">state</label>
+    <input type="text" required id="state"  maxlength="30" placeholder="Enter state">(max 30 characters a-z and A-Z)<br>
+    <label for="country">country</label>
+    <input type="text" required id="country" placeholder="Enter country"><br>
+    
+        <label for="hobbies">hobbies</label>
+        <span id="hobbies">
+        Drawing
+        <input type="checkbox" required name="hobbies" value="drawing">
+        Singing
+        <input type="checkbox" required name="hobbies" value="drawing">
+        Dancing
+        <input type="checkbox" required name="hobbies" value="drawing">
+        Sketching
+        <input type="checkbox" required name="hobbies" value="drawing">
+        <p style="margin-left: 250px;">
+         Others
+        <input type="checkbox" required name="hobbies" value="others">
+        <input type="text"></span></p>
+
+<div class="qualification">
+    Qualification <span class="qualify_table"> 
+        S.No. <span style="margin-left: 15px;">Examination</span><span style="margin-left: 70px;"> Board</span> 
+        <span style="margin-left: 90px;">Percentage</span>   <span style="margin-left: 100px;">Year of Passing</span>  
+</span>
+<div class="qualify_table">
+<p style="margin-left: 10px;">1 <span style="margin-left: 30px;">Class X </span>
+    <input style="margin-left: 40px;" maxlength="10"  type="text"><input maxlength="10"  style="margin-left: 10px;" type="text"><input style="margin-left: 10px;" type="text"></p>
+<p style="margin-left: 10px;">2 <span style="margin-left: 30px;">Class XII </span> 
+    <input style="margin-left: 28px;" maxlength="10" type="text"><input maxlength="10"  style="margin-left: 10px;" type="text"><input  style="margin-left: 10px;" type="text"></p>
+<p style="margin-left: 10px;">3 <span style="margin-left: 30px;">Graduation </span>
+    <input  maxlength="10" style="margin-left: 18px;" type="text"><input maxlength="10"  style="margin-left: 10px;" type="text"><input style="margin-left: 10px;" type="text"></p>
+<p style="margin-left: 10px;">4 <span style="margin-left: 30px;">Masters </span>
+     <input maxlength="10" style="margin-left: 38px;" type="text"><input maxlength="10"  style="margin-left: 10px;" type="text"><input  style="margin-left: 10px;" type="text"></p>
+<p><span style="margin-left: 150px;"> (10 char max)</span>
+     <span style="margin-left: 150px;"> (10 char max)</span></p></div>
+</div>
+<div>
+<label for="course"><p>Courses</p>APPLIED FOR</label>
+   <span class="course_radio" style="margin-left: 150px; "> BCA<input required type="radio" id="BCA" name="course" value="BCA">
+    B.Com<input required type="radio" id="BCom" name="course" value="BCom">
+    B.Sc<input required type="radio" id="BSc" name="course" value="BSc">
+    B.A<input required type="radio" id="BA" name="course" value="BA">
+    
+   </span>
+</div>
+
+<div class="sbtn" style="margin-left: 39%;">
+    <input type="submit" > <input type="reset">
+</div>
+</form>
+
+
+</div>
+
+
+</body>
+
+
+
+
+</html>
