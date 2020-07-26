@@ -1,13 +1,22 @@
-/* Basic Style */
+
 body {
-    background: #fff;
+    background: rgb(0, 135, 145);
     color: #333;
     font-family: Lato, sans-serif;
   }
+  div h1{
+    padding: 2%;
+    margin: 50px 38% -50px;
+    width: 200px;
+  }
   .container {
     display: block;
-    width: 400px;
-    margin: 100px auto 0;
+    width: 60%;
+    padding: 2%;
+    margin: 100px auto;
+    border: 2px solid turquoise;
+    border-radius: 10px;
+    background-color: rgb(125, 219, 211);
   }
   ul {
     margin: 0;
@@ -26,17 +35,18 @@ body {
   button {
     background: none;
     border: 0px;
-    color: #888;
-    font-size: 15px;
-    width: 60px;
-    margin: 10px 0 0;
+    float: right;
+    margin-right: 10px;
+    color: rgb(83, 82, 82);
+    font-size: 18px;
+    padding: 2%;
     font-family: Lato, sans-serif;
     cursor: pointer;
   }
   button:hover {
     color: #333;
   }
-  /* Heading */
+ 
   h3,
   label[for='new-task'] {
     color: #333;
@@ -51,7 +61,6 @@ body {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
-    height: 18px;
     padding: 10px;
     border: 1px solid #ddd;
     background: #fff;
@@ -61,52 +70,59 @@ body {
   }
   input[type="text"]:focus {
     color: #333;
-  }
-  
-  /* New Task */
+  }  
+
   label[for='new-task'] {
     display: block;
     margin: 0 0 20px;
   }
   input#new-task {
     float: left;
-    width: 318px;
+    width: 65%;
   }
-  p > button:hover {
-    color: #0FC57C;
+ button:hover {
+   
+    background-color: #60c79e;
+    border-radius: 50%;
   }
   
-  /* Task list */
+
   li {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
   }
-  li > input[type="checkbox"] {
-    margin: 0 10px;
-    position: relative;
-    top: 15px;
-  }
+ 
   li > label {
     font-size: 18px;
     line-height: 40px;
-    width: 237px;
+    width: 65%;
     padding: 0 0 0 11px;
   }
   li >  input[type="text"] {
-    width: 226px;
+    width: 65%;
+  }
+  li > .delete {
+    font-size: 18px;
+    
+    color: rgb(224, 53, 53);
+    
   }
   li > .delete:hover {
-    color: #CF2323;
+    
+    background-color: rgb(207, 150, 150);
+    border-radius: 50%;
   }
   
-  /* Completed */
-  #completed-tasks label {
+
+  #Todocompleted label {
     text-decoration: line-through;
     color: #888;
+    
+    
   }
   
-  /* Edit Task */
+
   ul li input[type=text] {
     display:none;
   }
